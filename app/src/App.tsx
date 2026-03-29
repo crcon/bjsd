@@ -8,7 +8,7 @@ import { ResponsibilityMatrix } from '@/components/ResponsibilityMatrix';
 import { Toaster } from '@/components/ui/sonner';
 
 function App() {
-  const [activeTab, setActiveTab] = useState('dashboard');
+  const [activeTab, setActiveTab] = useState('handbook');
 
   const renderContent = () => {
     switch (activeTab) {
@@ -23,7 +23,7 @@ function App() {
       case 'parties':
         return <ResponsibilityMatrix />;
       default:
-        return <Dashboard onTabChange={setActiveTab} />;
+        return <Handbook />;
     }
   };
 

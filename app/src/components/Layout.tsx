@@ -20,11 +20,11 @@ interface LayoutProps {
 }
 
 const navItems = [
-  { id: 'dashboard', name: '项目总览', icon: LayoutDashboard },
   { id: 'handbook', name: '开发手册', icon: BookOpen },
-  { id: 'projects', name: '项目管理', icon: FolderKanban },
   { id: 'process', name: '流程图', icon: FileText },
   { id: 'parties', name: '责任边界', icon: Users },
+  { id: 'dashboard', name: '项目总览', icon: LayoutDashboard },
+  { id: 'projects', name: '项目管理', icon: FolderKanban },
 ];
 
 export function Layout({ children, activeTab, onTabChange }: LayoutProps) {

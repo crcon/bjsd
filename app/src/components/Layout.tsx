@@ -48,7 +48,7 @@ export function Layout({ children, activeTab, onTabChange }: LayoutProps) {
             <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-teal-500 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">ES</span>
             </div>
-            <span className="font-semibold text-slate-800 text-sm">储能开发平台</span>
+            <span className="font-semibold text-slate-800 text-sm">易储数能开发平台</span>
           </div>
           <Button
             variant="ghost"

@@ -105,7 +105,7 @@ export function Dashboard({ onTabChange }: DashboardProps) {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold text-slate-900">项目总览</h1>
-          <p className="text-slate-500 mt-1">电网侧独立储能电站开发管理平台</p>
+          <p className="text-slate-500 mt-1">易储数能开发平台</p>
         </div>
         <div className="flex items-center gap-3">
           <Button variant="outline" onClick={() => setIsExportOpen(true)}>

@@ -83,8 +83,8 @@ export function Layout({ children, activeTab, onTabChange }: LayoutProps) {
             </div>
           </div>
 
-          <nav className="overflow-x-auto px-3 pb-3">
-            <div className="flex gap-2 min-w-max">
+          <nav className="px-3 pb-3">
+            <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
               {navItems.map((item) => renderNavButton(item, true))}
             </div>
           </nav>

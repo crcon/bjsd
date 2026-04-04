@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>政策文件详情</title>
+<link rel="stylesheet" href="../shared/style.css">
+<style>
+  .policy-grid {
+    flex:1; display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:.9vw;
+    min-height:0;
+  }
+  .policy-item {
+    background:var(--card); border:1px solid var(--cardb);
+    border-radius:.5vw; padding:1.2vh 1.2vw;
+    display:flex; gap:.8vw; align-items:flex-start;
+    position:relative; overflow:hidden;
+  }
+  .policy-item::before {
+    content:''; position:absolute; left:0; top:0; bottom:0;
+    width:3px; background:var(--pc, var(--primary));
+  }
+  .policy-num {
+    flex-shrink:0; width:1.8vw; height:1.8vw;
+    background:var(--pc, var(--primary));
+    border-radius:50%; display:flex; align-items:center; justify-content:center;
+    font-size:.75vw; font-weight:800; color:#fff; margin-top:.1vh;
+  }
+  .policy-body {}
+  .policy-title { font-size:.92vw; font-weight:700; color:#fff; line-height:1.4; margin-bottom:.4vh; }
+  .policy-doc   { font-size:.72vw; color:var(--dim); margin-bottom:.5vh; }
+  .policy-desc  { font-size:.82vw; color:var(--muted); line-height:1.55; }
+  .policy-tag   { display:inline-flex; margin-top:.4vh; }
+
+  .p1 { --pc: #1565C0; }
+  .p2 { --pc: #00838F; }
+  .p3 { --pc: #2E7D32; }
+  .p4 { --pc: #E65100; }
+  .p5 { --pc: #4527A0; }
+  .p6 { --pc: #880E4F; }
+  .p7 { --pc: #37474F; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="grid-bg"></div>
+  <div class="slide-head au d1">
+    <div>
+      <div class="eyebrow">Chapter 02 · 电力市场政策</div>
+      <h2>2025年 七项重要政策文件</h2>
+    </div>
+    <div class="pnum">11 / 22</div>
+  </div>
+
+  <div class="policy-grid">
+    <div class="policy-item p1 au d2">
+      <div class="policy-num">1</div>
+      <div class="policy-body">
+        <div class="policy-title">新能源上网电价市场化改革</div>
+        <div class="policy-doc">发改价格〔2025〕136号</div>
+        <div class="policy-desc">推动新能源上网电价全面市场形成，上网电量原则上全部进入电力市场，标志着新能源由"保障收购"转向"市场交易"。</div>
+      </div>
+    </div>
+    <div class="policy-item p2 au d3">
+      <div class="policy-num">2</div>
+      <div class="policy-body">
+        <div class="policy-title">电力辅助服务市场基本规则</div>
+        <div class="policy-doc">发改能源规〔2025〕411号</div>
+        <div class="policy-desc">扩展辅助服务主体范围至售电公司、用户、新型经营主体，规范"谁受益谁承担"传导机制，明确与现货市场衔接。</div>
+      </div>
+    </div>
+    <div class="policy-item p3 au d4">
+      <div class="policy-num">3</div>
+      <div class="policy-body">
+        <div class="policy-title">电力市场计量结算基本规则</div>
+        <div class="policy-doc">发改能源规〔2025〕976号</div>
+        <div class="policy-desc">规范计量数据管理标准，明确结算由交易机构出具依据、电网企业开展电费结算两环节，完善追退补和清算流程。</div>
+      </div>
+    </div>
+    <div class="policy-item p4 au d5">
+      <div class="policy-num">4</div>
+      <div class="policy-body">
+        <div class="policy-title">电力现货连续运行地区市场建设指引</div>
+        <div class="policy-doc">发改能源〔2025〕1171号</div>
+        <div class="policy-desc">现货与中长期、辅助服务一体化设计；鼓励虚拟电厂、储能"报量报价"参与；推动批零价格有效传导。</div>
+      </div>
+    </div>
+    <div class="policy-item p5 au d6">
+      <div class="policy-num">5</div>
+      <div class="policy-body">
+        <div class="policy-title">可再生能源绿色电力证书管理实施细则</div>
+        <div class="policy-doc">国能发资质规〔2025〕107号</div>
+        <div class="policy-desc">明确绿证核发、划转、核销全流程要求，构建覆盖项目建档、数据归集到绿证核发的完整管理链。</div>
+      </div>
+    </div>
+    <div class="policy-item p6 au d7">
+      <div class="policy-num">6</div>
+      <div class="policy-body">
+        <div class="policy-title">建立全国统一电力市场评价制度</div>
+        <div class="policy-doc">发改办体改〔2025〕1032号</div>
+        <div class="policy-desc">围绕运营效果、市场竞争充分度等核心维度开展评价，2026年起实施全国统一评价，鼓励量化评价。</div>
+      </div>
+    </div>
+    <div class="policy-item p7 au d8">
+      <div class="policy-num">7</div>
+      <div class="policy-body">
+        <div class="policy-title">电力中长期市场基本规则</div>
+        <div class="policy-doc">发改能源规〔2025〕1656号</div>
+        <div class="policy-desc">统一市场成员分类，覆盖数年至月内全时序交易周期，规范跨电网、跨省跨区和省内协同交易体系。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-strip"></div>
+  <div class="slide-footer">北京电力交易中心 · 2025年电力市场年报</div>
+</div>
+</body>
+</html>

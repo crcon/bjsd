@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>结语 · 展望未来</title>
+<link rel="stylesheet" href="../shared/style.css">
+<style>
+  .conclusion-layout {
+    flex:1; display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:2vw; min-height:0;
+  }
+  .left-panel { display:flex; flex-direction:column; gap:1.5vh; }
+  .right-panel { display:flex; flex-direction:column; gap:1.2vh; }
+
+  /* Achievement summary */
+  .achieve-banner {
+    background: linear-gradient(135deg, rgba(21,101,192,.25), rgba(0,188,212,.15));
+    border: 1px solid rgba(21,101,192,.4);
+    border-radius:.8vw; padding:2.2vh 2vw;
+    position:relative; overflow:hidden;
+  }
+  .achieve-banner::after {
+    content:''; position:absolute; right:-2vw; top:50%; transform:translateY(-50%);
+    width:20vw; height:20vw; border-radius:50%;
+    background:radial-gradient(circle, rgba(0,188,212,.12), transparent 70%);
+    pointer-events:none;
+  }
+  .achieve-banner .headline {
+    font-size:1.8vw; font-weight:800; color:#fff; line-height:1.4; margin-bottom:1vh;
+  }
+  .achieve-banner .subtext {
+    font-size:.95vw; color:var(--muted); line-height:1.7; max-width:90%;
+  }
+
+  /* KPI recap grid */
+  .kpi-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:.8vw; }
+  .kpi-mini {
+    background:var(--card); border:1px solid var(--brd);
+    border-radius:.4vw; padding:1vh .9vw;
+    position:relative; overflow:hidden;
+  }
+  .kpi-mini::before {
+    content:''; position:absolute; top:0; left:0;
+    width:100%; height:2px;
+    background:var(--tc, var(--primary));
+  }
+  .kpi-mini .kpi-num { font-size:1.6vw; font-weight:900; color:#fff; line-height:1; }
+  .kpi-mini .kpi-unit { font-size:.72vw; font-weight:400; color:var(--muted); margin-left:.2vw; }
+  .kpi-mini .kpi-lb { font-size:.72vw; color:var(--muted); margin-top:.4vh; }
+
+  /* Quote block */
+  .quote-block {
+    background:rgba(255,255,255,.04);
+    border-left:3px solid var(--plight);
+    border-radius:0 .4vw .4vw 0;
+    padding:1.2vh 1.2vw;
+    font-size:.95vw; color:var(--txt); line-height:1.8;
+    font-style:italic;
+  }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="grid-bg"></div>
+  <!-- decorative glow -->
+  <div class="glow-circle" style="width:40vw;height:40vw;right:-8vw;bottom:-10vw;opacity:.3"></div>
+
+  <div class="slide-head au d1">
+    <div>
+      <div class="eyebrow">结  语</div>
+      <h2>砥砺奋进再出发 · 构建新型电力系统</h2>
+    </div>
+    <div class="pnum">22 / 22</div>
+  </div>
+
+  <div class="conclusion-layout">
+    <!-- LEFT -->
+    <div class="left-panel">
+      <div class="achieve-banner au d2">
+        <div class="headline">初步建成<br>全国统一电力市场</div>
+        <div class="subtext">
+          2025年，全国电力市场在国家能源局的统一部署下，各交易机构协同推进，统一市场体系框架基本确立，制度体系、运营体系、技术支撑体系日趋完善，市场化改革取得历史性突破。
+        </div>
+      </div>
+
+      <div style="font-size:.88vw;font-weight:700;color:var(--muted);margin-top:.5vh" class="au d3">2025年核心成就一览</div>
+
+      <div class="kpi-grid au d4">
+        <div class="kpi-mini" style="--tc:var(--plight)">
+          <div class="kpi-num">8.1<span class="kpi-unit">万亿kWh</span></div>
+          <div class="kpi-lb">全社会用电量</div>
+        </div>
+        <div class="kpi-mini" style="--tc:var(--accent)">
+          <div class="kpi-num">54,691<span class="kpi-unit">亿kWh</span></div>
+          <div class="kpi-lb">市场化交易电量</div>
+        </div>
+        <div class="kpi-mini" style="--tc:var(--glight)">
+          <div class="kpi-num">59.4<span class="kpi-unit">%</span></div>
+          <div class="kpi-lb">清洁能源装机占比</div>
+        </div>
+        <div class="kpi-mini" style="--tc:var(--plight)">
+          <div class="kpi-num">804,278<span class="kpi-unit">家</span></div>
+          <div class="kpi-lb">市场注册经营主体</div>
+        </div>
+        <div class="kpi-mini" style="--tc:var(--glight)">
+          <div class="kpi-num">2,174<span class="kpi-unit">亿kWh</span></div>
+          <div class="kpi-lb">绿色电力交易电量</div>
+        </div>
+        <div class="kpi-mini" style="--tc:var(--amber)">
+          <div class="kpi-num">8.7<span class="kpi-unit">亿张</span></div>
+          <div class="kpi-lb">绿色电力证书签发</div>
+        </div>
+      </div>
+
+      <div class="quote-block au d5">
+        坚持以习近平新时代中国特色社会主义思想为指导，紧紧围绕党和国家工作大局，统筹推进电力市场化改革，不断实现电力市场建设新跨越。
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right-panel">
+      <div class="card au d3" style="flex:1.2">
+        <div style="font-size:.95vw;font-weight:700;color:#fff;margin-bottom:1.2vh;display:flex;align-items:center;gap:.5vw">
+          <span style="font-size:1.1vw">🔭</span> 未来展望
+        </div>
+        <div class="ilist" style="gap:1.2vh">
+          <div class="iitem">
+            <div class="iicon" style="background:rgba(21,101,192,.2)">🏛</div>
+            <div>
+              <div class="ititle" style="font-size:.9vw">深化制度建设</div>
+              <div class="itext tsm fmuted">进一步完善"1+6"配套规则，健全绿电、绿证、容量等细化规则，不断完善市场制度体系</div>
+            </div>
+          </div>
+          <div class="iitem">
+            <div class="iicon" style="background:rgba(0,188,212,.2)">⚡</div>
+            <div>
+              <div class="ititle" style="font-size:.9vw">扩大新能源参与</div>
+              <div class="itext tsm fmuted">持续推动新能源全面参与市场，探索适应高比例新能源的价格形成机制和交易模式</div>
+            </div>
+          </div>
+          <div class="iitem">
+            <div class="iicon" style="background:rgba(67,160,71,.2)">🌿</div>
+            <div>
+              <div class="ititle" style="font-size:.9vw">绿色市场扩容</div>
+              <div class="itext tsm fmuted">扩大绿电绿证交易规模，实现绿证核发全覆盖，助力"双碳"目标和可再生能源消纳</div>
+            </div>
+          </div>
+          <div class="iitem">
+            <div class="iicon" style="background:rgba(245,127,23,.2)">🤝</div>
+            <div>
+              <div class="ititle" style="font-size:.9vw">推进区域协同</div>
+              <div class="itext tsm fmuted">健全跨省跨区市场化交易机制，推动长三角等重点区域形成统一价格信号，优化资源配置</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card au d4">
+        <div style="font-size:.88vw;font-weight:700;color:#fff;margin-bottom:1vh">构建新型电力系统支撑体系</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:.7vh">
+          <div style="background:rgba(21,101,192,.1);border:1px solid rgba(21,101,192,.2);border-radius:.3vw;padding:.8vh .7vw;font-size:.8vw;line-height:1.5;color:var(--muted)">
+            <strong style="color:var(--plight)">价格信号</strong><br>引导资源合理配置
+          </div>
+          <div style="background:rgba(0,188,212,.1);border:1px solid rgba(0,188,212,.2);border-radius:.3vw;padding:.8vh .7vw;font-size:.8vw;line-height:1.5;color:var(--muted)">
+            <strong style="color:var(--accent)">容量保障</strong><br>服务电力供应安全
+          </div>
+          <div style="background:rgba(67,160,71,.1);border:1px solid rgba(67,160,71,.2);border-radius:.3vw;padding:.8vh .7vw;font-size:.8vw;line-height:1.5;color:var(--muted)">
+            <strong style="color:var(--glight)">辅助服务</strong><br>支撑系统灵活运行
+          </div>
+          <div style="background:rgba(245,127,23,.1);border:1px solid rgba(245,127,23,.2);border-radius:.3vw;padding:.8vh .7vw;font-size:.8vw;line-height:1.5;color:var(--muted)">
+            <strong style="color:var(--amber)">绿色消费</strong><br>助力碳达峰碳中和
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center;padding:.8vh;border-radius:.5vw;background:rgba(255,255,255,.03);border:1px solid var(--brd)" class="au d5">
+        <div style="font-size:.85vw;color:var(--muted)">北京电力交易中心有限公司 &nbsp;·&nbsp; 中国电力出版社</div>
+        <div style="font-size:.75vw;color:var(--dim);margin-top:.3vh">2025年 &nbsp;|&nbsp; 全国统一电力市场建设年度纪要</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-strip"></div>
+  <div class="slide-footer">北京电力交易中心 · 2025年电力市场年报</div>
+</div>
+</body>
+</html>

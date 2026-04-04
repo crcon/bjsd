@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>目录</title>
+<link rel="stylesheet" href="../shared/style.css">
+<style>
+  .toc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.1vw 2.5vw;
+    flex: 1;
+  }
+  .toc-item {
+    display: flex; align-items: center; gap: 1.2vw;
+    padding: 1.4vh 1.3vw;
+    background: var(--card);
+    border: 1px solid var(--cardb);
+    border-radius: .5vw;
+    cursor: default;
+    transition: background .2s, transform .15s;
+    position: relative; overflow: hidden;
+  }
+  .toc-item::before {
+    content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+    width: 3px; background: var(--accent-color, var(--primary));
+  }
+  .toc-item:hover { background: rgba(255,255,255,.07); transform: translateX(2px); }
+  .toc-num {
+    font-size: 2.2vw; font-weight: 900; line-height: 1;
+    color: var(--accent-color, var(--primary));
+    opacity: .55; font-feature-settings: 'tnum';
+    flex-shrink: 0; width: 2.8vw;
+  }
+  .toc-content { flex: 1; }
+  .toc-title { font-size: 1.15vw; font-weight: 700; color: var(--white); margin-bottom: .4vh; }
+  .toc-sub  { font-size: .82vw; color: var(--muted); line-height: 1.5; }
+
+  /* 7个章节 + 附加 */
+  .c1 { --accent-color: #1565C0; }
+  .c2 { --accent-color: #00838F; }
+  .c3 { --accent-color: #2E7D32; }
+  .c4 { --accent-color: #E65100; }
+  .c5 { --accent-color: #1A237E; }
+  .c6 { --accent-color: #4A148C; }
+  .c7 { --accent-color: #880E4F; }
+  .c8 { --accent-color: #37474F; }
+  .c9 { --accent-color: #37474F; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="grid-bg"></div>
+  <div class="slide-head au d1">
+    <div>
+      <div class="eyebrow">Contents</div>
+      <h1>报告目录</h1>
+    </div>
+    <div class="pnum">02 / 22</div>
+  </div>
+
+  <div class="toc-grid">
+    <div class="toc-item c1 au d2">
+      <div class="toc-num">01</div>
+      <div class="toc-content">
+        <div class="toc-title">电力市场概况</div>
+        <div class="toc-sub">供需形势 · 装机结构 · 成员规模 · 交易电量 · 绿电绿证</div>
+      </div>
+    </div>
+    <div class="toc-item c2 au d3">
+      <div class="toc-num">02</div>
+      <div class="toc-content">
+        <div class="toc-title">电力市场政策</div>
+        <div class="toc-sub">"1+6"基础规则体系 · 7项重要政策文件</div>
+      </div>
+    </div>
+    <div class="toc-item c3 au d4">
+      <div class="toc-num">03</div>
+      <div class="toc-content">
+        <div class="toc-title">电力市场成效</div>
+        <div class="toc-sub">保供 · 新型系统 · 资源配置 · 绿色消费</div>
+      </div>
+    </div>
+    <div class="toc-item c4 au d5">
+      <div class="toc-num">04</div>
+      <div class="toc-content">
+        <div class="toc-title">电力市场建设</div>
+        <div class="toc-sub">全国统一 · 跨区机制 · 省间互济 · 绿电绿证 · 零售</div>
+      </div>
+    </div>
+    <div class="toc-item c5 au d6">
+      <div class="toc-num">05</div>
+      <div class="toc-content">
+        <div class="toc-title">电力市场运营</div>
+        <div class="toc-sub">注册共享 · 中长期连续运营 · 结算质效提升</div>
+      </div>
+    </div>
+    <div class="toc-item c6 au d7">
+      <div class="toc-num">06</div>
+      <div class="toc-content">
+        <div class="toc-title">交易机构规范运作</div>
+        <div class="toc-sub">法人治理 · 市场管委会 · 合规管理 · 联盟协作</div>
+      </div>
+    </div>
+    <div class="toc-item c7 au d8">
+      <div class="toc-num">07</div>
+      <div class="toc-content">
+        <div class="toc-title">交易平台与标准建设</div>
+        <div class="toc-sub">平台能力 · 移动应用 · 实名认证 · 标准体系</div>
+      </div>
+    </div>
+    <div class="toc-item c8 au d9">
+      <div class="toc-num">08</div>
+      <div class="toc-content">
+        <div class="toc-title">电力市场服务</div>
+        <div class="toc-sub">宣传服务 · 阳光交易 · 金融产品</div>
+      </div>
+    </div>
+    <div class="toc-item c9 au d10">
+      <div class="toc-num">09</div>
+      <div class="toc-content">
+        <div class="toc-title">党建引领</div>
+        <div class="toc-sub">党建工作 · 廉洁文化 · 组织建设</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-strip"></div>
+  <div class="slide-footer">北京电力交易中心 · 2025年电力市场年报</div>
+</div>
+</body>
+</html>

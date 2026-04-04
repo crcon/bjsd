@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>新能源市场化概览</title>
+<link rel="stylesheet" href="../shared/style.css">
+<style>
+  .hero-strip {
+    display:grid; grid-template-columns:1fr 1fr 1fr;
+    gap:1.3vw; margin-bottom:2vh;
+  }
+  .hero-card {
+    background: var(--card); border:1px solid var(--cardb);
+    border-radius:.55vw; padding:1.6vh 1.4vw;
+    position:relative; overflow:hidden;
+  }
+  .hero-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background: var(--hc, var(--primary)); }
+  .hero-val  { font-size:3vw; font-weight:900; color:#fff; line-height:1; font-feature-settings:'tnum'; }
+  .hero-unit { font-size:.9vw; font-weight:400; color:var(--muted); margin-left:.2vw; }
+  .hero-lbl  { font-size:.88vw; color:var(--muted); margin-top:.6vh; }
+  .hero-delta{ font-size:.85vw; font-weight:700; margin-top:.3vh; color:var(--glight); }
+
+  .main-body { flex:1; display:grid; grid-template-columns:1.1fr 1fr; gap:2vw; min-height:0; }
+  .col { display:flex; flex-direction:column; gap:1.3vh; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="grid-bg"></div>
+  <div class="slide-head au d1">
+    <div>
+      <div class="eyebrow">Chapter 01 · 电力市场概况</div>
+      <h2>新能源入市 · 绿色市场全景</h2>
+    </div>
+    <div class="pnum">09 / 22</div>
+  </div>
+
+  <!-- 顶通栏 -->
+  <div class="hero-strip">
+    <div class="hero-card au d2" style="--hc:var(--plight)">
+      <div><span class="hero-val">57.9</span><span class="hero-unit">%</span></div>
+      <div class="hero-lbl">新能源市场化交易占比</div>
+      <div class="hero-delta">↑ 较2024年+5.6ppt</div>
+    </div>
+    <div class="hero-card au d3" style="--hc:var(--glight)">
+      <div><span class="hero-val">10,718</span><span class="hero-unit">亿千瓦时</span></div>
+      <div class="hero-lbl">新能源市场化交易电量</div>
+      <div class="hero-delta">↑ 37.8%</div>
+    </div>
+    <div class="hero-card au d4" style="--hc:#FFD54F">
+      <div><span class="hero-val">18,499</span><span class="hero-unit">亿千瓦时</span></div>
+      <div class="hero-lbl">新能源总发电量</div>
+      <div class="hero-delta">↑ 24.5%</div>
+    </div>
+  </div>
+
+  <div class="main-body">
+    <!-- 左：新能源入市 三年增长 -->
+    <div class="col">
+      <div class="card au d3" style="flex:1">
+        <div style="font-size:.95vw;font-weight:700;color:#fff;margin-bottom:1.2vh">新能源市场化交易 2023—2025年</div>
+        <table class="dt" style="font-size:.9vw">
+          <thead><tr><th>年份</th><th class="tr">发电量（亿千瓦时）</th><th class="tr">市场化交易（亿千瓦时）</th><th class="tr">占比</th></tr></thead>
+          <tbody>
+            <tr><td>2023</td><td class="tr">12,175</td><td class="tr">5,638</td><td class="tr">46.3%</td></tr>
+            <tr><td>2024</td><td class="tr">14,864</td><td class="tr">7,780</td><td class="tr">52.3%</td></tr>
+            <tr><td style="font-weight:700;color:#fff">2025</td><td class="tr hl">18,499</td><td class="tr gg" style="font-size:1.05vw">10,718</td><td class="tr gg" style="font-size:1.05vw;font-weight:700">57.9%</td></tr>
+          </tbody>
+        </table>
+        <div class="hdivider"></div>
+        <!-- 占比增长条 -->
+        <div style="font-size:.82vw;color:var(--dim);margin-bottom:.5vh">市场化占比提升进程</div>
+        <div class="hbar" style="gap:.5vh">
+          <div class="hbar-row" style="grid-template-columns:3vw 1fr 4vw">
+            <div class="hbar-lb">2023</div>
+            <div class="hbar-track"><div class="hbar-fill" style="width:46.3%"></div></div>
+            <div class="hbar-vl" style="font-size:.82vw">46.3%</div>
+          </div>
+          <div class="hbar-row" style="grid-template-columns:3vw 1fr 4vw">
+            <div class="hbar-lb">2024</div>
+            <div class="hbar-track"><div class="hbar-fill" style="width:52.3%"></div></div>
+            <div class="hbar-vl" style="font-size:.82vw">52.3%</div>
+          </div>
+          <div class="hbar-row" style="grid-template-columns:3vw 1fr 4vw">
+            <div class="hbar-lb" style="color:var(--glight);font-weight:700">2025</div>
+            <div class="hbar-track"><div class="hbar-fill green" style="width:57.9%"></div></div>
+            <div class="hbar-vl" style="font-size:.82vw;color:var(--glight);font-weight:700">57.9%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 右：绿证总览 -->
+    <div class="col">
+      <div class="card au d4">
+        <div style="font-size:.95vw;font-weight:700;color:#fff;margin-bottom:1vh">绿证市场 2025年全景</div>
+        <div class="g2" style="gap:.9vw">
+          <div style="background:rgba(67,160,71,.12);border:1px solid rgba(67,160,71,.25);border-radius:.4vw;padding:1.2vh 1vw">
+            <div style="font-size:1.8vw;font-weight:800;color:#fff;line-height:1">8.7<span style="font-size:.85vw;font-weight:400;color:var(--muted)">亿张</span></div>
+            <div style="font-size:.82vw;color:var(--muted);margin-top:.4vh">绿证平台划转总量</div>
+          </div>
+          <div style="background:rgba(21,101,192,.12);border:1px solid rgba(21,101,192,.25);border-radius:.4vw;padding:1.2vh 1vw">
+            <div style="font-size:1.8vw;font-weight:800;color:#fff;line-height:1">22,973<span style="font-size:.75vw;font-weight:400;color:var(--muted)">万张</span></div>
+            <div style="font-size:.82vw;color:var(--muted);margin-top:.4vh">绿证交易量（2025）</div>
+          </div>
+        </div>
+        <div class="hdivider"></div>
+        <div style="font-size:.82vw;color:var(--dim);margin-bottom:.5vh">绿证构成（亿张）</div>
+        <div class="hbar" style="gap:.5vh">
+          <div class="hbar-row" style="grid-template-columns:5vw 1fr 3vw">
+            <div class="hbar-lb" style="font-size:.8vw">绿电对应</div>
+            <div class="hbar-track"><div class="hbar-fill green" style="width:34%"></div></div>
+            <div class="hbar-vl" style="font-size:.8vw">3.0</div>
+          </div>
+          <div class="hbar-row" style="grid-template-columns:5vw 1fr 3vw">
+            <div class="hbar-lb" style="font-size:.8vw">单独交易</div>
+            <div class="hbar-track"><div class="hbar-fill cyan" style="width:26%"></div></div>
+            <div class="hbar-vl" style="font-size:.8vw">2.3</div>
+          </div>
+          <div class="hbar-row" style="grid-template-columns:5vw 1fr 3vw">
+            <div class="hbar-lb" style="font-size:.8vw">常规水电</div>
+            <div class="hbar-track"><div class="hbar-fill" style="width:39%;background:linear-gradient(90deg,#00695C,#4DB6AC)"></div></div>
+            <div class="hbar-vl" style="font-size:.8vw">3.4</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hbox au d5">
+        <div class="hbox-text">
+          2025年，新能源 <strong>57.9%</strong> 的上网电量进入市场交易，
+          绿证交易量 <strong>22,973万张</strong>，同比增长近30%，绿色市场体系日趋完善。
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-strip"></div>
+  <div class="slide-footer">北京电力交易中心 · 2025年电力市场年报</div>
+</div>
+</body>
+</html>

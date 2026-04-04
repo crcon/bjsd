@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>封面</title>
+<link rel="stylesheet" href="../shared/style.css">
+<style>
+  body { background: #060e1a; }
+  .cover {
+    width: 100vw; height: 100vh;
+    display: flex; align-items: center;
+    padding: 0 var(--px);
+    position: relative; overflow: hidden;
+    background: radial-gradient(ellipse 80% 70% at 75% 50%, rgba(21,101,192,.18) 0%, transparent 65%),
+                linear-gradient(150deg, #060e1a 0%, #0a1a2e 100%);
+  }
+
+  /* 电网格纹 */
+  .cover::before {
+    content: ''; position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(21,101,192,.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(21,101,192,.04) 1px, transparent 1px);
+    background-size: 3.5vw 3.5vw;
+  }
+
+  /* 光晕圆 */
+  .glow1 {
+    position: absolute; right: 8vw; top: 15vh;
+    width: 40vw; height: 40vw; border-radius: 50%;
+    background: radial-gradient(circle, rgba(21,101,192,.12), transparent 70%);
+    pointer-events: none;
+  }
+  .glow2 {
+    position: absolute; right: 20vw; bottom: 10vh;
+    width: 25vw; height: 25vw; border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,188,212,.08), transparent 70%);
+    pointer-events: none;
+  }
+
+  /* 装饰竖线 */
+  .deco-line {
+    position: absolute; top: 0; left: calc(var(--px) - 1.2vw); bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, transparent, var(--primary) 30%, var(--accent) 70%, transparent);
+    opacity: .35;
+  }
+
+  .inner { position: relative; z-index: 1; max-width: 60vw; }
+
+  .tag-line {
+    font-size: .9vw; font-weight: 700; letter-spacing: .22em;
+    color: var(--accent); text-transform: uppercase; margin-bottom: 2.5vh;
+  }
+  .main-title {
+    font-size: 5.8vw; font-weight: 900; color: var(--white);
+    line-height: 1.12; margin-bottom: 1.4vh;
+    text-shadow: 0 4px 40px rgba(21,101,192,.4);
+  }
+  .main-title span { color: var(--plight); }
+  .gradient-bar {
+    width: 6vw; height: .42vh;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    border-radius: 2px; margin: 2vh 0;
+  }
+  .publisher {
+    font-size: 1.15vw; color: var(--muted); margin-top: 1vh; letter-spacing: .04em;
+  }
+
+  /* KPI 预览 */
+  .kpi-strip {
+    display: flex; gap: 0; margin-top: 5vh;
+    border: 1px solid var(--cardb); border-radius: .55vw; overflow: hidden;
+  }
+  .kpi-item {
+    flex: 1; padding: 1.8vh 1.4vw;
+    border-right: 1px solid var(--cardb);
+    background: rgba(255,255,255,.03);
+  }
+  .kpi-item:last-child { border-right: none; }
+  .kpi-val {
+    font-size: 2.6vw; font-weight: 900; color: var(--white);
+    font-feature-settings: 'tnum'; line-height: 1;
+  }
+  .kpi-val .kpi-unit { font-size: .95vw; font-weight: 400; color: var(--muted); margin-left: .2vw; }
+  .kpi-lbl { font-size: .85vw; color: var(--dim); margin-top: .5vh; }
+
+  /* 右侧装饰 */
+  .deco-right {
+    position: absolute; right: var(--px); top: 50%;
+    transform: translateY(-50%); z-index: 1;
+    display: flex; flex-direction: column; align-items: center; gap: 1.5vh;
+  }
+  .deco-circle {
+    border-radius: 50%; border: 1px solid rgba(21,101,192,.3);
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(21,101,192,.4); font-size: 1.2vw; font-weight: 700;
+  }
+</style>
+</head>
+<body>
+<div class="cover">
+  <div class="glow1"></div>
+  <div class="glow2"></div>
+  <div class="deco-line"></div>
+
+  <div class="inner">
+    <div class="tag-line au d1">Beijing Electric Power Exchange · 2025 Annual Report</div>
+    <h1 class="main-title au d2">
+      北京电力交易中心<br><span>2025年</span>电力市场<br>年度报告
+    </h1>
+    <div class="gradient-bar au d3"></div>
+    <div class="publisher au d4">
+      北京电力交易中心有限公司 &nbsp;·&nbsp; 中国电力出版社
+    </div>
+
+    <div class="kpi-strip au d5">
+      <div class="kpi-item">
+        <div class="kpi-val">8.1<span class="kpi-unit">万亿千瓦时</span></div>
+        <div class="kpi-lbl">全社会用电量</div>
+      </div>
+      <div class="kpi-item">
+        <div class="kpi-val">54,691<span class="kpi-unit">亿千瓦时</span></div>
+        <div class="kpi-lbl">市场化交易电量</div>
+      </div>
+      <div class="kpi-item">
+        <div class="kpi-val">80.4<span class="kpi-unit">万家</span></div>
+        <div class="kpi-lbl">市场经营主体</div>
+      </div>
+      <div class="kpi-item">
+        <div class="kpi-val">59.4<span class="kpi-unit">%</span></div>
+        <div class="kpi-lbl">清洁能源装机占比</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 右侧装饰环 -->
+  <div class="deco-right ai d6">
+    <div class="deco-circle" style="width:14vw;height:14vw;"></div>
+    <div class="deco-circle" style="width:9vw;height:9vw; margin-top:-3vw; margin-left:3vw;"></div>
+    <div class="deco-circle" style="width:5vw;height:5vw; margin-top:-1vw; margin-left:-2vw;"></div>
+  </div>
+
+  <div class="footer-strip"></div>
+</div>
+</body>
+</html>

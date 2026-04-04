@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>省级市场两个全覆盖</title>
+<link rel="stylesheet" href="../shared/style.css">
+<style>
+  .main-body { flex:1; display:grid; grid-template-columns:1fr 1fr; gap:2vw; min-height:0; }
+  .col { display:flex; flex-direction:column; gap:1.3vh; }
+
+  .coverage-banner {
+    background: linear-gradient(135deg,rgba(21,101,192,.2),rgba(0,188,212,.1));
+    border:1px solid rgba(21,101,192,.35); border-radius:.55vw;
+    padding:1.5vh 1.4vw;
+  }
+  .cb-title { font-size:1.1vw; font-weight:700; color:#fff; margin-bottom:1vh; }
+  .cb-row { display:flex; gap:2vw; }
+  .cb-item { flex:1; }
+  .cb-num  { font-size:2.8vw; font-weight:900; color:#fff; line-height:1; font-feature-settings:'tnum'; }
+  .cb-num small { font-size:.85vw; font-weight:400; color:var(--muted); }
+  .cb-lbl  { font-size:.82vw; color:var(--muted); margin-top:.4vh; }
+
+  .status-list { display:flex; flex-direction:column; gap:.6vh; }
+  .status-row  { display:flex; align-items:center; gap:.8vw; }
+  .status-dot  { width:.65vw; height:.65vw; border-radius:50%; flex-shrink:0; }
+  .status-text { font-size:.85vw; color:var(--text); line-height:1.4; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="grid-bg"></div>
+  <div class="slide-head au d1">
+    <div>
+      <div class="eyebrow">Chapter 04 · 电力市场建设</div>
+      <h2>实现省级市场"两个全覆盖"</h2>
+    </div>
+    <div class="pnum">18 / 22</div>
+  </div>
+
+  <div class="main-body">
+    <!-- 左：中长期全覆盖 -->
+    <div class="col">
+      <div class="coverage-banner au d2">
+        <div class="cb-title">✅ 中长期市场：省内按日连续运行</div>
+        <div class="cb-row">
+          <div class="cb-item">
+            <div class="cb-num">30+<small>省</small></div>
+            <div class="cb-lbl">除西藏外均已实现</div>
+          </div>
+          <div class="cb-item">
+            <div class="cb-num">100%<small>  </small></div>
+            <div class="cb-lbl">分时段交易与结算</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card au d3" style="flex:1">
+        <div style="font-size:.92vw;font-weight:700;color:#fff;margin-bottom:1vh">中长期市场核心特征</div>
+        <div class="ilist" style="gap:1vh">
+          <div class="iitem">
+            <div class="iicon" style="background:rgba(21,101,192,.2)">📅</div>
+            <div>
+              <div class="ititle" style="font-size:.88vw">按工作日连续运行</div>
+              <div class="itext tsm fmuted">全年省间中长期月内市场交易电量 <strong style="color:#fff">1,009亿千瓦时</strong>，同比增长 <strong style="color:#fff">33.7%</strong></div>
+            </div>
+          </div>
+          <div class="iitem">
+            <div class="iicon" style="background:rgba(0,188,212,.2)">🕐</div>
+            <div>
+              <div class="ititle" style="font-size:.88vw">带曲线分时段交易</div>
+              <div class="itext tsm fmuted">精准体现电能分时价值，山西省内中长期均价304.7元/MWh，与日前现货313.8元/MWh价格一致性达 <strong style="color:#fff">0.97</strong></div>
+            </div>
+          </div>
+          <div class="iitem">
+            <div class="iicon" style="background:rgba(67,160,71,.2)">🔄</div>
+            <div>
+              <div class="ititle" style="font-size:.88vw">甘肃融合模式</div>
+              <div class="itext tsm fmuted">发电与发电、用户多方向交易融合，月度融合11场，周融合28场，D-2滚动成交276万笔</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 右：现货全覆盖 -->
+    <div class="col">
+      <div class="coverage-banner au d2" style="background:linear-gradient(135deg,rgba(67,160,71,.15),rgba(129,199,132,.08));border-color:rgba(67,160,71,.35)">
+        <div class="cb-title">✅ 现货市场：连续结算运行全覆盖</div>
+        <div class="cb-row">
+          <div class="cb-item">
+            <div class="cb-num" style="color:var(--glight)">5<small>地</small></div>
+            <div class="cb-lbl">正式运行</div>
+          </div>
+          <div class="cb-item">
+            <div class="cb-num" style="color:var(--plight)">18<small>地</small></div>
+            <div class="cb-lbl">连续结算试运行</div>
+          </div>
+          <div class="cb-item">
+            <div class="cb-num" style="color:var(--muted)">1<small>地</small></div>
+            <div class="cb-lbl">模拟试运行</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card au d3" style="flex:1">
+        <div style="font-size:.92vw;font-weight:700;color:#fff;margin-bottom:1vh">现货市场进度详情</div>
+        <div class="status-list">
+          <div class="status-row">
+            <div class="status-dot" style="background:var(--glight)"></div>
+            <div class="status-text"><strong style="color:#fff">正式运行（5地）：</strong>省间现货 + 山西、山东、甘肃、湖北、浙江</div>
+          </div>
+          <div class="status-row">
+            <div class="status-dot" style="background:var(--plight)"></div>
+            <div class="status-text"><strong style="color:#fff">连续结算试运行（18地）：</strong>安徽、辽宁、黑龙江、江苏等18地</div>
+          </div>
+          <div class="status-row">
+            <div class="status-dot" style="background:var(--dim)"></div>
+            <div class="status-text"><strong style="color:#fff">模拟试运行（1地）：</strong>京津唐</div>
+          </div>
+        </div>
+        <div class="hdivider"></div>
+        <div style="font-size:.88vw;font-weight:700;color:#fff;margin-bottom:.5vh">典型实践亮点</div>
+        <div class="ilist" style="gap:.8vh">
+          <div class="iitem">
+            <div class="iicon" style="font-size:.8vw;background:rgba(245,127,23,.2);color:var(--alight)">山西</div>
+            <div class="itext tsm fmuted">中长期分时段交易累计4,600批次，合约600万笔，成交5,000亿千瓦时，与现货价格趋于一致</div>
+          </div>
+          <div class="iitem">
+            <div class="iicon" style="font-size:.8vw;background:rgba(21,101,192,.2);color:var(--plight)">宁夏</div>
+            <div class="itext tsm fmuted">51家独立储能首次实现跨省充（新疆新能源）放（陕西）一体化交易，开辟省间储能共享路径</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-strip"></div>
+  <div class="slide-footer">北京电力交易中心 · 2025年电力市场年报</div>
+</div>
+</body>
+</html>

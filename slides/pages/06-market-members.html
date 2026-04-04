@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>市场成员与市场化交易</title>
+<link rel="stylesheet" href="../shared/style.css">
+<style>
+  .main-body { flex:1; display:grid; grid-template-columns:1fr 1.3fr; gap:2vw; min-height:0; }
+  .left-col, .right-col { display:flex; flex-direction:column; gap:1.4vh; }
+
+  .member-total {
+    background: linear-gradient(135deg,rgba(21,101,192,.18),rgba(0,188,212,.1));
+    border:1px solid rgba(21,101,192,.35); border-radius:.55vw;
+    padding:1.6vh 1.5vw; display:flex; align-items:center; gap:2vw;
+  }
+  .mt-num { font-size:4vw; font-weight:900; color:#fff; line-height:1; font-feature-settings:'tnum'; }
+  .mt-unit{ font-size:1.1vw; font-weight:400; color:var(--muted); }
+  .mt-lbl { font-size:.9vw; color:var(--muted); margin-top:.5vh; }
+  .mt-delta{ font-size:.95vw; font-weight:700; color:var(--glight); }
+
+  .type-grid { display:grid; grid-template-columns:1fr 1fr; gap:.9vw; flex:1; }
+  .tcard {
+    background:var(--card); border:1px solid var(--cardb);
+    border-radius:.45vw; padding:1.2vh 1vw; position:relative; overflow:hidden;
+  }
+  .tcard::before { content:''; position:absolute; bottom:0; left:0; right:0; height:2px; background:var(--tc,var(--primary)); }
+  .tcard .tv { font-size:1.8vw; font-weight:800; color:#fff; line-height:1; font-feature-settings:'tnum'; }
+  .tcard .tl { font-size:.82vw; color:var(--muted); margin-top:.4vh; }
+
+  .growth-chart { flex:1; }
+  .gc-title { font-size:.95vw; font-weight:700; color:#fff; margin-bottom:1vh; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="grid-bg"></div>
+  <div class="slide-head au d1">
+    <div>
+      <div class="eyebrow">Chapter 01 · 电力市场概况</div>
+      <h2>市场成员 · 市场化交易规模</h2>
+    </div>
+    <div class="pnum">06 / 22</div>
+  </div>
+
+  <div class="main-body">
+    <!-- 左：市场成员 -->
+    <div class="left-col">
+      <div class="member-total au d2">
+        <div>
+          <div>
+            <span class="mt-num">804,278</span>
+            <span class="mt-unit">家</span>
+          </div>
+          <div class="mt-lbl">2025年 经营主体总量</div>
+          <div class="mt-delta">↑ 同比增长 22.6%</div>
+        </div>
+      </div>
+
+      <div class="type-grid au d3">
+        <div class="tcard" style="--tc:#42A5F5">
+          <div class="tv">763,153</div>
+          <div class="tl">电力用户</div>
+        </div>
+        <div class="tcard" style="--tc:#66BB6A">
+          <div class="tv">36,934</div>
+          <div class="tl">发电企业</div>
+        </div>
+        <div class="tcard" style="--tc:#FFA726">
+          <div class="tv">3,786</div>
+          <div class="tl">售电公司</div>
+        </div>
+        <div class="tcard" style="--tc:#AB47BC">
+          <div class="tv">368</div>
+          <div class="tl">独立储能</div>
+        </div>
+      </div>
+
+      <!-- 三年增长 -->
+      <div class="card au d4">
+        <div class="gc-title">经营主体规模 2023—2025年增长</div>
+        <table class="dt" style="font-size:.88vw">
+          <thead><tr><th>年份</th><th class="tr">数量（家）</th><th class="tr">同比增长</th></tr></thead>
+          <tbody>
+            <tr><td>2023</td><td class="tr">568,351</td><td class="tr">18.8%</td></tr>
+            <tr><td>2024</td><td class="tr">655,802</td><td class="tr">15.4%</td></tr>
+            <tr><td style="color:#fff;font-weight:700">2025</td><td class="tr hl" style="font-size:1vw">804,278</td><td class="tr" style="color:var(--glight);font-weight:700">22.6%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 右：市场化交易 -->
+    <div class="right-col">
+      <div class="g2 au d2">
+        <div class="stat-card blue">
+          <div class="sv">54,691<small>亿千瓦时</small></div>
+          <div class="sl">2025年 市场化交易电量</div>
+          <div class="sd up">8.8%</div>
+        </div>
+        <div class="stat-card cyan">
+          <div class="sv">12,920<small>亿千瓦时</small></div>
+          <div class="sl">省间市场化交易电量</div>
+          <div class="sd up">10.7%</div>
+        </div>
+      </div>
+
+      <div class="card au d3" style="flex:1">
+        <div style="font-size:.95vw;font-weight:700;color:#fff;margin-bottom:1.2vh">市场化交易电量 2023—2025年增长</div>
+        <!-- 柱图 -->
+        <div style="display:flex;align-items:flex-end;gap:1.5vw;height:12vh;margin-bottom:1vh">
+          <div style="display:flex;flex-direction:column;align-items:center;flex:1">
+            <div style="font-size:.82vw;color:var(--muted);margin-bottom:.4vh">46,801</div>
+            <div style="width:100%;height:75%;background:linear-gradient(180deg,var(--plight),var(--primary));border-radius:.3vw .3vw 0 0"></div>
+            <div style="font-size:.8vw;color:var(--muted);margin-top:.4vh">2023</div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;flex:1">
+            <div style="font-size:.82vw;color:var(--muted);margin-bottom:.4vh">50,277</div>
+            <div style="width:100%;height:85%;background:linear-gradient(180deg,var(--plight),var(--primary));border-radius:.3vw .3vw 0 0"></div>
+            <div style="font-size:.8vw;color:var(--muted);margin-top:.4vh">2024</div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;flex:1">
+            <div style="font-size:.9vw;color:var(--glight);margin-bottom:.4vh;font-weight:700">54,691</div>
+            <div style="width:100%;height:100%;background:linear-gradient(180deg,var(--glight),var(--green));border-radius:.3vw .3vw 0 0"></div>
+            <div style="font-size:.8vw;color:var(--glight);margin-top:.4vh;font-weight:700">2025</div>
+          </div>
+        </div>
+        <div class="hdivider"></div>
+        <table class="dt" style="font-size:.88vw">
+          <thead><tr><th>类型</th><th class="tr">电量（亿千瓦时）</th><th class="tr">同比增长</th></tr></thead>
+          <tbody>
+            <tr><td>省间市场化</td><td class="tr">12,920</td><td class="tr gg">10.7%</td></tr>
+            <tr><td>省内市场化</td><td class="tr">41,771</td><td class="tr gg">8.2%</td></tr>
+            <tr><td style="font-weight:700;color:#fff">合计</td><td class="tr hl" style="font-size:1.05vw">54,691</td><td class="tr gg" style="font-size:1.05vw;font-weight:700">8.8%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="hbox au d5">
+        <div class="hbox-text">经营主体规模 <strong>22.6%</strong> 的高速增长，反映市场吸引力持续增强，市场化交易电量规模创历史新高。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-strip"></div>
+  <div class="slide-footer">北京电力交易中心 · 2025年电力市场年报</div>
+</div>
+</body>
+</html>

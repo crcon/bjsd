@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>装机容量</title>
+<link rel="stylesheet" href="../shared/style.css">
+<style>
+  .main-body { flex: 1; display: grid; grid-template-columns: 1.2fr 1fr; gap: 2vw; min-height: 0; }
+  .left-col { display: flex; flex-direction: column; gap: 1.5vh; }
+  .right-col { display: flex; flex-direction: column; gap: 1.5vh; }
+
+  /* 饼图用SVG */
+  .donut-section { display: flex; align-items: center; gap: 2vw; flex: 1; }
+
+  /* 容量结构水平条 */
+  .capacity-bar-label { font-size: .88vw; color: var(--muted); margin-bottom: .8vh; }
+  .type-bars { display: flex; flex-direction: column; gap: .7vh; }
+  .type-row { display: grid; grid-template-columns: 5.5vw 1fr 5vw; align-items: center; gap: .6vw; }
+  .type-label { font-size: .85vw; color: var(--text); }
+  .type-track { background: rgba(255,255,255,.06); height: 1.5vh; border-radius: .75vh; overflow: hidden; }
+  .type-fill  { height: 100%; border-radius: .75vh; }
+  .type-val   { font-size: .85vw; font-weight: 600; color: var(--white); text-align: right; }
+
+  /* 利用小时数 */
+  .util-table { flex: 1; }
+
+  .clean-highlight {
+    background: linear-gradient(135deg, rgba(67,160,71,.15), rgba(129,199,132,.08));
+    border: 1px solid rgba(67,160,71,.3);
+    border-radius: .5vw; padding: 1.4vh 1.3vw;
+    display: flex; align-items: center; gap: 1.5vw;
+  }
+  .clean-num { font-size: 3.8vw; font-weight: 900; color: #fff; line-height: 1; }
+  .clean-num small { font-size: 1.1vw; font-weight: 400; color: var(--muted); }
+  .clean-detail { font-size: .9vw; color: var(--muted); line-height: 1.7; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="grid-bg"></div>
+  <div class="slide-head au d1">
+    <div>
+      <div class="eyebrow">Chapter 01 · 电力市场概况</div>
+      <h2>电网电源建设 · 装机容量</h2>
+    </div>
+    <div class="pnum">05 / 22</div>
+  </div>
+
+  <div class="main-body">
+    <div class="left-col">
+      <!-- 总装机亮点 -->
+      <div class="clean-highlight au d2">
+        <div>
+          <div class="clean-num">304,257<small>万千瓦</small></div>
+          <div class="clean-detail" style="margin-top:.5vh">2025年 总发电装机 · 同比增长 <strong style="color:#fff">15.5%</strong></div>
+        </div>
+        <div style="width:1px;background:rgba(67,160,71,.3);align-self:stretch"></div>
+        <div>
+          <div class="clean-num" style="color:var(--glight);font-size:3vw">59.4<small>%</small></div>
+          <div class="clean-detail" style="margin-top:.5vh">清洁能源装机占比<br>同比提升 <strong style="color:#fff">3.7</strong> 个百分点</div>
+        </div>
+      </div>
+
+      <!-- 装机结构条 -->
+      <div class="card au d3" style="flex:1">
+        <div class="capacity-bar-label">各类型发电装机容量（万千瓦）</div>
+        <div class="type-bars">
+          <div class="type-row">
+            <div class="type-label">太阳能</div>
+            <div class="type-track"><div class="type-fill" style="width:100%;background:linear-gradient(90deg,#F57F17,#FFD54F)"></div></div>
+            <div class="type-val" style="color:#FFD54F">95,752</div>
+          </div>
+          <div class="type-row">
+            <div class="type-label">火电</div>
+            <div class="type-track"><div class="type-fill" style="width:86%;background:linear-gradient(90deg,#455A64,#90A4AE)"></div></div>
+            <div class="type-val" style="color:#90A4AE">123,548</div>
+          </div>
+          <div class="type-row">
+            <div class="type-label">风电</div>
+            <div class="type-track"><div class="type-fill" style="width:53%;background:linear-gradient(90deg,#0277BD,#4FC3F7)"></div></div>
+            <div class="type-val" style="color:#4FC3F7">50,739</div>
+          </div>
+          <div class="type-row">
+            <div class="type-label">水电</div>
+            <div class="type-track"><div class="type-fill" style="width:31%;background:linear-gradient(90deg,#00695C,#4DB6AC)"></div></div>
+            <div class="type-val" style="color:#4DB6AC">30,100</div>
+          </div>
+          <div class="type-row">
+            <div class="type-label">核电</div>
+            <div class="type-track"><div class="type-fill" style="width:4%;background:linear-gradient(90deg,#6A1B9A,#CE93D8)"></div></div>
+            <div class="type-val" style="color:#CE93D8">4,112</div>
+          </div>
+        </div>
+
+        <!-- SVG 简易饼图 -->
+        <div style="margin-top:1.5vh;display:flex;align-items:center;gap:1.5vw">
+          <svg width="8vw" height="8vw" viewBox="0 0 100 100" style="min-width:80px;min-height:80px">
+            <!-- 清洁能源: 59.4% ≈ 214°  非清洁: 40.6% ≈ 146° -->
+            <!-- 从12点钟方向顺时针 -->
+            <!-- 火电 40.6% → offset 0, dash 40.6 of 100 circumference=314 → -->
+            <!-- 使用 stroke-dasharray 画饼 -->
+            <circle cx="50" cy="50" r="40" fill="none" stroke="#455A64" stroke-width="20"
+              stroke-dasharray="127.3 314.2" stroke-dashoffset="0"
+              transform="rotate(-90 50 50)"/>
+            <circle cx="50" cy="50" r="40" fill="none" stroke="#F57F17" stroke-width="20"
+              stroke-dasharray="93.9 314.2" stroke-dashoffset="-127.3"
+              transform="rotate(-90 50 50)"/>
+            <circle cx="50" cy="50" r="40" fill="none" stroke="#0277BD" stroke-width="20"
+              stroke-dasharray="50.8 314.2" stroke-dashoffset="-221.2"
+              transform="rotate(-90 50 50)"/>
+            <circle cx="50" cy="50" r="40" fill="none" stroke="#00695C" stroke-width="20"
+              stroke-dasharray="30.2 314.2" stroke-dashoffset="-272"
+              transform="rotate(-90 50 50)"/>
+            <circle cx="50" cy="50" r="40" fill="none" stroke="#6A1B9A" stroke-width="20"
+              stroke-dasharray="4.1 314.2" stroke-dashoffset="-302.2"
+              transform="rotate(-90 50 50)"/>
+            <circle cx="50" cy="50" r="26" fill="#0C1B2E"/>
+            <text x="50" y="46" text-anchor="middle" fill="#fff" font-size="10" font-weight="800">59.4%</text>
+            <text x="50" y="57" text-anchor="middle" fill="#81C784" font-size="7">清洁能源</text>
+          </svg>
+          <div style="display:flex;flex-direction:column;gap:.5vh">
+            <div class="legend-row"><div class="legend-dot" style="background:#F57F17"></div><span style="font-size:.8vw">太阳能 31.5%</span></div>
+            <div class="legend-row"><div class="legend-dot" style="background:#455A64"></div><span style="font-size:.8vw">火电 40.6%</span></div>
+            <div class="legend-row"><div class="legend-dot" style="background:#0277BD"></div><span style="font-size:.8vw">风电 16.7%</span></div>
+            <div class="legend-row"><div class="legend-dot" style="background:#00695C"></div><span style="font-size:.8vw">水电 9.9%</span></div>
+            <div class="legend-row"><div class="legend-dot" style="background:#6A1B9A"></div><span style="font-size:.8vw">核电 1.3%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 右栏：利用小时 -->
+    <div class="right-col">
+      <div class="card au d4" style="flex:1">
+        <div style="font-size:.95vw;font-weight:700;color:var(--white);margin-bottom:1.2vh">2025年 发电设备平均利用小时数</div>
+        <div style="font-size:.8vw;color:var(--dim);margin-bottom:1.5vh">经营区平均：<strong style="color:var(--plight)">2,853 小时</strong></div>
+        <table class="dt">
+          <thead>
+            <tr><th>电源类型</th><th class="tr">利用小时（h）</th><th class="tr">同比变化</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>核电</td><td class="tr hl">7,833</td><td class="tr up">↑ 170</td></tr>
+            <tr><td>火电</td><td class="tr">4,189</td><td class="tr down" style="color:var(--red)">↓ 211</td></tr>
+            <tr><td>水电</td><td class="tr">3,141</td><td class="tr down" style="color:var(--red)">↓ 158</td></tr>
+            <tr><td>风电</td><td class="tr">1,989</td><td class="tr down" style="color:var(--red)">↓ 109</td></tr>
+            <tr><td>太阳能</td><td class="tr">1,115</td><td class="tr down" style="color:var(--red)">↓ 45</td></tr>
+            <tr>
+              <td style="font-weight:700;color:#fff">综合平均</td>
+              <td class="tr hl" style="font-size:1.1vw">2,853</td>
+              <td class="tr">—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="hbox au d5">
+        <div class="hbox-text">
+          清洁能源装机 <strong>180,703 万千瓦</strong>，同比增长 23.2%，
+          全面超越传统化石能源，标志着装机结构转型历史性突破。
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-strip"></div>
+  <div class="slide-footer">北京电力交易中心 · 2025年电力市场年报</div>
+</div>
+</body>
+</html>

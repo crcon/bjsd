@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>第五章 电力市场运营</title>
+<link rel="stylesheet" href="../shared/style.css">
+<style>
+  .main-body { flex:1; display:grid; grid-template-columns:1fr 1fr 1fr; gap:1.5vw; min-height:0; }
+  .op-col { display:flex; flex-direction:column; gap:1.2vh; }
+  .op-head {
+    font-size:1vw; font-weight:700; color:#fff;
+    padding:.6vh 0; border-bottom:1px solid var(--div);
+    margin-bottom:.4vh;
+    display:flex; align-items:center; gap:.5vw;
+  }
+  .op-head::before { content:''; display:inline-block; width:.3vw; height:1.5vh; background:var(--oh, var(--primary)); border-radius:2px; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="grid-bg"></div>
+  <div class="slide-head au d1">
+    <div>
+      <div class="eyebrow">Chapter 05 · 电力市场运营</div>
+      <h2>注册共享 · 中长期连续运营 · 结算质效提升</h2>
+    </div>
+    <div class="pnum">21 / 22</div>
+  </div>
+
+  <div class="main-body">
+    <!-- 售电注册 -->
+    <div class="op-col">
+      <div class="op-head au d2" style="--oh:var(--plight)">注册共享 · 一地注册全国复用</div>
+
+      <div style="background:linear-gradient(135deg,rgba(21,101,192,.15),rgba(66,165,245,.08));border:1px solid rgba(21,101,192,.3);border-radius:.5vw;padding:1.4vh 1.2vw" class="au d3">
+        <div style="font-size:2.5vw;font-weight:900;color:#fff;line-height:1">"一地注册<br>全国共享"</div>
+        <div style="font-size:.82vw;color:var(--muted);margin-top:.6vh">联合广州电力交易中心，营业执照、从业人员、场所等信息跨经营区线上共享</div>
+      </div>
+
+      <div class="card au d4" style="flex:1">
+        <div style="font-size:.88vw;font-weight:700;color:#fff;margin-bottom:.8vh">注册提效实践</div>
+        <div class="ilist" style="gap:.9vh">
+          <div class="iitem">
+            <div class="iicon" style="background:rgba(21,101,192,.2)">🤖</div>
+            <div>
+              <div class="ititle" style="font-size:.85vw">AI智能审核（湖南）</div>
+              <div class="itext tsm fmuted">AI自动识别企业名称等关键信息，23项智能校验规则实时反馈纠错，注册时长缩短 <strong style="color:#fff">80%</strong>，减少手动填写 <strong style="color:#fff">73%</strong></div>
+            </div>
+          </div>
+          <div class="iitem">
+            <div class="iicon" style="background:rgba(67,160,71,.2)">📁</div>
+            <div>
+              <div class="ititle" style="font-size:.85vw">标准化档案管理（山东）</div>
+              <div class="itext tsm fmuted">20个档案类别，"主体-场站-项目-机组-户号"标准化数据模型，<strong style="color:#fff">5.6万</strong>经营主体全部纳入</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 中长期连续运营 -->
+    <div class="op-col">
+      <div class="op-head au d2" style="--oh:var(--accent)">深化中长期市场连续运营</div>
+
+      <div style="background:linear-gradient(135deg,rgba(0,188,212,.12),rgba(0,131,143,.08));border:1px solid rgba(0,188,212,.3);border-radius:.5vw;padding:1.4vh 1.2vw" class="au d3">
+        <div style="font-size:2vw;font-weight:900;color:#fff;line-height:1">1,009<span style="font-size:1vw;font-weight:400;color:var(--muted)">亿千瓦时</span></div>
+        <div style="font-size:.82vw;color:var(--muted);margin-top:.5vh">省间中长期月内市场交易电量</div>
+        <div style="font-size:.9vw;font-weight:700;color:var(--glight);margin-top:.3vh">↑ 同比增长 33.7%</div>
+      </div>
+
+      <div class="card au d4" style="flex:1">
+        <div style="font-size:.88vw;font-weight:700;color:#fff;margin-bottom:.8vh">度夏最大跨区送电（万千瓦）</div>
+        <div class="hbar" style="gap:.5vh">
+          <div class="hbar-row" style="grid-template-columns:5vw 1fr 4vw">
+            <div class="hbar-lb" style="font-size:.8vw">送华东</div>
+            <div class="hbar-track"><div class="hbar-fill cyan" style="width:100%"></div></div>
+            <div class="hbar-vl" style="font-size:.8vw;color:var(--accent)">7,890</div>
+          </div>
+          <div class="hbar-row" style="grid-template-columns:5vw 1fr 4vw">
+            <div class="hbar-lb" style="font-size:.8vw">送华中</div>
+            <div class="hbar-track"><div class="hbar-fill cyan" style="width:51%"></div></div>
+            <div class="hbar-vl" style="font-size:.8vw">4,045</div>
+          </div>
+          <div class="hbar-row" style="grid-template-columns:5vw 1fr 4vw">
+            <div class="hbar-lb" style="font-size:.8vw">送华北</div>
+            <div class="hbar-track"><div class="hbar-fill" style="width:42%"></div></div>
+            <div class="hbar-vl" style="font-size:.8vw">3,299</div>
+          </div>
+        </div>
+        <div class="hdivider"></div>
+        <div style="font-size:.82vw;color:var(--muted);line-height:1.6">
+          度夏区内省间互济电量 <strong style="color:#fff">1,367亿千瓦时</strong>，同比增长 <strong style="color:#fff">14.5%</strong>；积极响应高温大负荷，跨区送电同比增加431—555万千瓦。
+        </div>
+      </div>
+    </div>
+
+    <!-- 结算质效 -->
+    <div class="op-col">
+      <div class="op-head au d2" style="--oh:var(--glight)">提升结算质效 · 规范化运营</div>
+
+      <div style="background:linear-gradient(135deg,rgba(67,160,71,.12),rgba(129,199,132,.08));border:1px solid rgba(67,160,71,.3);border-radius:.5vw;padding:1.4vh 1.2vw" class="au d3">
+        <div style="font-size:1.5vw;font-weight:800;color:#fff;line-height:1.2">日清分<br>月结算</div>
+        <div style="font-size:.82vw;color:var(--muted);margin-top:.6vh">省间结算流程规范，"日清分、月结算"功能全面应用</div>
+      </div>
+
+      <div class="card au d4" style="flex:1">
+        <div style="font-size:.88vw;font-weight:700;color:#fff;margin-bottom:.8vh">结算规范化举措</div>
+        <div class="ilist" style="gap:.9vh">
+          <div class="iitem">
+            <div class="iicon" style="background:rgba(67,160,71,.2)">📝</div>
+            <div>
+              <div class="ititle" style="font-size:.85vw">落实《计量结算基本规则》</div>
+              <div class="itext tsm fmuted">逐条梳理现行结算工作现状，按《规则》完善工作流程、优化交易平台功能</div>
+            </div>
+          </div>
+          <div class="iitem">
+            <div class="iicon" style="background:rgba(21,101,192,.2)">🔗</div>
+            <div>
+              <div class="ititle" style="font-size:.85vw">省间一体化结算</div>
+              <div class="itext tsm fmuted">完成省间"日清分、月结算"功能全面应用，规范省间结算流程</div>
+            </div>
+          </div>
+          <div class="iitem">
+            <div class="iicon" style="background:rgba(0,188,212,.2)">📡</div>
+            <div>
+              <div class="ititle" style="font-size:.85vw">市场运营监测分析</div>
+              <div class="itext tsm fmuted">建立市场运营监测分析工作体系，实现全覆盖实时监测，加强跨部门跨专业协同</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-strip"></div>
+  <div class="slide-footer">北京电力交易中心 · 2025年电力市场年报</div>
+</div>
+</body>
+</html>

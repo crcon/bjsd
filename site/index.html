@@ -1,43 +1,51 @@
 <!doctype html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>北京电力交易中心 2025年电力市场年报</title>
-    <link rel="stylesheet" href="assets/styles.css">
-  </head>
-  <body data-app="deck">
-    <div class="deck-shell">
-      <header class="deck-chrome">
-        <div>
-          <div class="deck-kicker">HTML 演示稿</div>
-          <div class="deck-title">北京电力交易中心 2025年电力市场年报</div>
-        </div>
-        <div class="deck-actions">
-          <button type="button" class="deck-button" data-action="prev">上一页</button>
-          <button type="button" class="deck-button" data-action="next">下一页</button>
-          <button type="button" class="deck-button" data-action="print">打印 / 导出 PDF</button>
-          <button type="button" class="deck-button deck-button-primary" data-action="fullscreen">全屏</button>
-        </div>
-      </header>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>北京电力交易中心 2025年电力市场年报</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-app="deck">
 
-      <main class="deck-main">
-        <div class="deck-stage">
-          <iframe id="slide-frame" title="slide frame" loading="eager"></iframe>
-        </div>
-      </main>
-
-      <footer class="deck-footer">
-        <div class="deck-meta">
-          <span id="slide-counter">1 / 15</span>
-          <span id="slide-name">封面</span>
-        </div>
-        <div class="deck-hint">键盘支持：← → Space PageUp PageDown Home End，按 F 全屏，打印按钮可导出 PDF</div>
-      </footer>
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-logo">
+      <div class="sidebar-logo-icon">电</div>
+      <div class="sidebar-logo-text">北京电力交易中心<small>2025年电力市场年报</small></div>
     </div>
+    <div class="sidebar-progress"><div class="sidebar-progress-fill" style="width:2.4%"></div></div>
+  </div>
+  <div class="sidebar-nav"></div>
+  <div class="sidebar-footer">
+    <button type="button" class="sidebar-btn" data-action="print">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+      导出PDF
+    </button>
+    <button type="button" class="sidebar-btn sidebar-btn-primary" data-action="fullscreen">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/></svg>
+      全屏
+    </button>
+  </div>
+</aside>
 
-    <section id="print-shell" class="print-shell" aria-label="print slides"></section>
+<div class="stage-wrapper">
+  <div class="stage">
+    <iframe id="slide-frame" title="slide" loading="eager"></iframe>
+  </div>
+  <div class="stage-controls">
+    <button type="button" class="stage-ctrl-btn" data-action="prev">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <span class="stage-counter">1 / 40</span>
+    <button type="button" class="stage-ctrl-btn" data-action="next">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+  </div>
+  <div class="keyboard-hint">← → Space F(全屏)</div>
+</div>
 
-    <script src="assets/app.js"></script>
-  </body>
+<section id="print-shell" class="print-shell"></section>
+<script src="assets/app.js"></script>
+</body>
 </html>
